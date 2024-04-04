@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui,  sans-serif;
+}
+
+
+/* --------------------MOBIL STØRRELSE FRA 373 PX--------------------------- */
+
+
+.container{
+    margin: 15px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.menu div{
+    padding: 2px 5px;
+    margin: 10px;
+    border: 2px solid rgb(102, 100, 100);
+}
+
+.grid-items{
+    background: white;
+    border: 2px solid rgb(102, 100, 100);
+    font-size: 1,5em;
+}
+
+.grid-items img{
+    width: 100%;
+}
+
+p{
+    padding: 15px;
+}
+
+.one {
+    grid-column: 1/3;
+}
+
+
+.footer{
+    grid-column: 1/3;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --------------------TABLET STØRRELSE FRA 791 PX--------------------------- */
+
+@media screen and (min-width: 791px) {
+    
+.container {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.one {
+    grid-column: 1/4;
+}
+
+.footer{
+    grid-column: 1/4;
+}
+
+}
+
+
+/* --------------------COMPUTER STØRRELSE FRA 1000 PX--------------------------- */
+
+@media screen and (min-width: 1000px) {
+
+.nav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 60px;
+    gap: 60px 20px;
+    grid-template-areas: 
+        "one    one    ."
+        "one    one    two"
+        "three  four   four"
+        ".      four   four"
+        "five   six    seven"
+        "footer footer footer";
+}
+
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+
+
+}
